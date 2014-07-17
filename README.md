@@ -2,17 +2,19 @@
 
 ## about kai's maquette
 
+- proposal on http://contesto.illustration.ch/
 - the local css changes are in udt-custom-content
 
 ## work
 
-- 16 july 5h (grok the html, the css, the splashscreen and the navigation)
-- 17 july 2h (add the content style and markdown)
+- 16 july: 5h (grok the html, the css, the splashscreen and the navigation)
+- 17 july: 2h (add the content style and markdown)
 
 ## todo
 
 html & co:
 
+- in the splash switch the logo (and link) when image changes
 - convert the logos to png and shrink them to the display size
 - dynamically set the href on the header's logo
 - implement the responsive variants
@@ -41,5 +43,6 @@ style:
 - should there be a way to go back to the splash screen?
 - do we really want the (c) at the end and the flags with languages?
 - in services there are two submenus... are they really needed? if yes how to manage / check the url and the menues?
+- should the splash screen image be bigger?
 
 
