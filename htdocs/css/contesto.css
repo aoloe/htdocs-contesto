@@ -1,0 +1,148 @@
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline; }
+
+.logo-homepage {background-attachment: inherit; position:absolute;}
+
+.header {
+    background:#000000;
+    /* display:block; */
+    width:100%;
+    min-height:50px;
+    height:auto !important;
+    height:50px;
+    line-height:49px;
+}
+
+.header .inner{
+    max-width:930px;
+    margin:auto;
+}
+
+.header .inner .menu ul {display:table !important;}
+
+.header .logo {
+    height:50px;
+    position:relative;
+    float:left;
+    position:relative;
+    bottom:0;
+
+}
+
+
+
+
+.menu ul li a {
+    color:#F29400;
+}
+
+.menu ul li a:hover {
+    color:#F6B958;
+}
+
+.menu ul li.current_page_item > a, .header .inner .menu ul li.current-menu-item > a {
+    background:#322518;
+    color:#F6B958;
+}
+
+.menu ul li.current > a, .menu ul li.current-menu-item > a, .menu ul li.current_page_item > a, .menu ul li.current-menu-ancestor > a, .menu ul li.current_page_ancestor > a{
+    background:#322518;
+    color:#F6B958;
+}
+
+.menu ul li:hover > a{
+    background:#000000;
+    color:#F6B958;
+}
+
+.menu .sub-menu, .menu .children {
+    background:#000000;
+    background:rgba(0,0,0,1);
+}
+
+.menu .sub-menu li a,.menu .children li a {
+    color:#F29400;
+}
+
+.menu .sub-menu li:hover > a,.menu .children li:hover > a {
+    background:#000000;
+    color:#F6B958;
+}
+
+.content {
+    padding-top: 50px;
+    max-width: 870px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:#F29400;
+    font-family: 'Anton', sans-serif;
+    margin-bottom:30px;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color:#F29400;
+}
+
+h1 {
+    font-size:40px;
+    line-height:40px;
+}
+h2 {
+    font-size:38px;
+    line-height:38px;
+}
+h3 {
+    font-size:35px;
+    line-height:35px;
+}
+h4 {
+    font-size:32px;
+    line-height:32px;
+}
+h5 {
+    font-size:28px;
+    line-height:28px;
+}
+h6 {
+    font-size:24px;
+    line-height:24px;
+}
+
+
+h1 {
+    font-size:85px;
+    line-height:70px;
+
+    text-align: center;
+    vertical-align: baseline;
+
+    width:100%;
+    padding-bottom:50px;
+    margin-bottom:50px;
+    text-transform:uppercase;
+
+    border-bottom:1px solid #F6B958;
+}
+
+p {
+    margin-bottom: 30px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    vertical-align: baseline;
+}
+
+strong {
+    font-weight: bold;
+    color: #666666;
+}

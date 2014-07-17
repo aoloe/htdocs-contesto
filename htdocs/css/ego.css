@@ -1,0 +1,50 @@
+/*--------------------------------------------------------
+    1.RESETS
+--------------------------------------------------------*/
+    
+    menu {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline; }
+
+    /* main menu
+    ----------------------------*/
+    
+    .menu ul{list-style:none; float:right; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:0;}
+    .menu ul li{margin-bottom: 0;position: relative;}
+    .menu > ul > li{float:left;padding:0; margin:0; }
+    .menu ul li:last-child{padding-right:0;}
+    /*styling & link animation*/
+    .menu ul li a{font-family: Verdana, sans-serif; font-size: 11px; color:#ccc; text-decoration:none; padding: 0 15px; display:block;
+    /*properties*/  -webkit-transition-property:background, color;-moz-transition-property:background, color;-o-transition-property:background, color;transition-property:background, color;
+    /*duration*/    -webkit-transition-duration:500ms,600ms;-moz-transition-duration:500ms,600ms;-o-transition-duration:500ms,600ms;transition-duration:500ms,600ms;
+    /*delay*/       -webkit-transition-delay:0s,100ms;-moz-transition-delay:0s,100ms;-o-transition-delay:0s,100ms;transition-delay:0s,100ms;}
+    .menu ul li a:hover{color:#ff2778;}
+
+    /*sub-menu*/
+    .menu .sub-menu,.menu .children{width: 180px;opacity: 0;visibility: hidden;position: absolute;z-index: 101;background:#222;background: rgba(0,0,0,0.8);box-shadow: 0 2px 2px rgba(0,0,0,.3);
+    /*initial position*/        -webkit-transform:translateY(5px);-moz-transform:translateY(5px);-o-transform:translateY(5px);transform:translateY(5px);
+    /*properties to animate*/   -webkit-transition-property:-webkit-transform, opacity, visibility;-moz-transition-property:-moz-transform, opacity, visibility;-o-transition-property:-o-transform, opacity, visibility;transition-property:transform, opacity, visibility;
+    /*duration*/                -webkit-transition-duration:200ms,200ms;-moz-transition-duration:200ms,200ms;-o-transition-duration:200ms,200ms;transition-duration:200ms,200ms;}
+    
+    .menu .sub-menu ul,.menu .children ul{top:0;left:180px;visibility: hidden;}
+    .menu .sub-menu li,.menu .children li{float: none;background: none;border-bottom: 1px dotted #555;padding-left: 0;padding-right: 0;}
+    .menu .sub-menu li a,.menu .children li a{color: #666;line-height:20px;padding: 10px 15px;}
+    .menu .sub-menu li:last-child,.menu .children li:last-child{border-bottom: none;}
+    
+    /*hover*/
+    .menu ul li:hover > a{background:rgba(0,0,0,1);color:#fff;}
+    .menu .sub-menu li.menu-item-has-children > a:after,
+    .menu .children li.page_item_has_children > a:after{content:"\25b8";height: 5px;position: relative;top: 1px;width: 5px;float: right;margin-right: -6px;font-size: 9px;}
+    .menu .sub-menu li.menu-item-has-children .sub-menu li.menu-item-has-children > a:after,
+    .menu .children li.page_item_has_children .sub-menu li.page_item_has_children > a:after{content: ""}
+    .menu .sub-menu li:hover > a,.menu .children li:hover > a{background:#000;color:#333;}
+    
+    /*hover active*/
+    .menu ul li:hover > .sub-menu,.menu ul li:hover > .children{visibility: visible;/*animate opacity*/opacity: 1;/*animate position*/-moz-transform:translateY(0px);-ms-transform:translateY(0px);-o-transform:translateY(0px);-webkit-transform:translateY(0px);transform:translateY(0px);}
+    .menu ul li.current > a,.menu ul li.current-menu-item > a,.menu ul li.current_page_item > a,.menu ul li.current-menu-ancestor > a,.menu ul li.current_page_ancestor > a{ background:rgba(0,0,0,1); color:#fff; }
+
+    /* mobile menu toggle
+    ----------------------------*/  
+    /*.header .inner .mobileMenuToggle{height:26px;width:100%;float:left;text-align:center;display:none;margin:19px auto 15px auto;}
+    .header .inner .mobileMenuToggle a,.header .mobileMenuToggle.open a{width:26px;height:26px;float:left;position:relative;left:50%; margin-left:-13px;}
+    .header .inner .mobileMenuToggle a{background:url(../images/mobileMenu-toggle.png) center 0 no-repeat;}
+    .header .inner .mobileMenuToggle.open a{background:url(../images/mobileMenu-toggle.png) center -26px no-repeat;}*/
+
