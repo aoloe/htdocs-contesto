@@ -17,7 +17,9 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
     margin:auto;
 }
 
-.header .inner .menu ul {display:table !important;}
+.header .inner .menu ul {
+    display:table !important;
+}
 
 .header .logo {
     height:50px;
@@ -70,7 +72,7 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
 
 .content {
     padding-top: 50px;
-    max-width: 870px;
+    max-width: 930px;
     margin: 0 auto;
     position: relative;
     padding-bottom: 100px;
@@ -140,6 +142,18 @@ p {
     font-size: 13px;
     line-height: 18px;
     vertical-align: baseline;
+}
+
+td {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    vertical-align: baseline;
+}
+
+table.prices {
+    margin-bottom: 30px;
 }
 
 strong {

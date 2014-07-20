@@ -1,65 +1,71 @@
+splash :
 about :
-    it :
-        url : profilo
-        label : Profilo
-    en : 
-        url : about
-        label : About us
-    fr : 
-        url : qui-sommes-nous
-        label : Qui sommes nous
-    de : 
-        url : profil
-        label : Profil
+    navigation : 
+        it :
+            url : profilo
+            label : Profilo
+        en : 
+            url : about
+            label : About us
+        fr : 
+            url : qui-sommes-nous
+            label : Qui sommes nous
+        de : 
+            url : profil
+            label : Profil
 services : 
-    it : 
-        url : servizi
-        label : Servizi
-    en : 
-        url : services
-        label : Services
-    fr : 
-        url : services
-        label : Services
-    de : 
-        url : dienstleistungen
-        label : Dienstleistungen
+    navigation : 
+        it : 
+            url : servizi
+            label : Servizi
+        en : 
+            url : services
+            label : Services
+        fr : 
+            url : services
+            label : Services
+        de : 
+            url : dienstleistungen
+            label : Dienstleistungen
 translators : 
-    it : 
-        url : traduttori
-        label : Traduttori
-    en : 
-        url : translators
-        label : Translators
-    fr : 
-        url : traducteurs
-        label : Traducteurs
-    de : 
-        url : uebersetzer
-        label : Übersetzer
+    navigation : 
+        it : 
+            url : traduttori
+            label : Traduttori
+        en : 
+            url : translators
+            label : Translators
+        fr : 
+            url : traducteurs
+            label : Traducteurs
+        de : 
+            url : uebersetzer
+            label : Übersetzer
 prices : 
-    it : 
-        url : tariffe
-        label : Tariffe
-    en : 
-        url : prices
-        label : Prices
-    fr : 
-        url : tarifs
-        label : Tarifs
-    de : 
-        url : preise
-        label : Preise
+    navigation : 
+        it : 
+            url : tariffe
+            label : Tariffe
+        en : 
+            url : prices
+            label : Prices
+        fr : 
+            url : tarifs
+            label : Tarifs
+        de : 
+            url : preise
+            label : Preise
 contact : 
-    it : 
-        url : contatto
-        label : Contatto
-    en : 
-        url : contact
-        label : Contact
-    fr : 
-        url : kontakt
-        label : Kontakt
-    de : 
-        url : contact
-        label : Contact
+    navigation : 
+        it : 
+            url : contatto
+            label : Contatto
+        en : 
+            url : contact
+            label : Contact
+        fr : 
+            url : contact
+            label : Contact
+        de : 
+            url : kontakt
+            label : Kontakt

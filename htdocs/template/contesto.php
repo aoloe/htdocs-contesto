@@ -1,15 +1,16 @@
 <!doctype html>
-<html lang="<?= isset($lang) ? $lang : 'en' ?>">
+<html lang="<?= isset($language) ? $language : 'en' ?>">
 <head>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<title>Contesto - Traduzioni – Übersetzungen – Traductions – Translations – Zürich</title>
+<title><?= isset($title) ? $title.' - Contesto' : 'Contesto - Traduzioni – Übersetzungen – Traductions – Translations – Zürich'?></title>
 
 <link rel="shortcut icon" href="images/favicon.png" />
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Anton" />
+<?php if (isset($fonts)) : foreach ($fonts as $value) : ?>
+<link rel="stylesheet" href="<?= $value ?>" />
+<?php endforeach; endif; ?>
 
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 

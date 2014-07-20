@@ -1,0 +1,33 @@
+Contact_form :
+    it : Contatto
+    de : Kontaktformular
+    fr : Formulaire de contact
+    en : Contact Form
+Name :
+    it : Nome
+    de : Name
+    fr : Nom
+    en : Name
+Subject :
+    it : Oggetto
+    de : Betreff
+    fr : Sujet
+    en : Subject
+
+Message :
+    it : Messaggio
+    de : Mitteilung
+    fr : Message
+    en : Message
+
+Submit :
+    it : Invia
+    de : Senden
+    fr : Envoi
+    en : Submit
+
+Required_field :
+    it : Campi obligatori
+    de : Obligatorisches Feld
+    fr : Saisie obligatoire 
+    en : Required field

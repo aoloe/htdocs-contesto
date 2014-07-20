@@ -1,4 +1,4 @@
-<div class="flexslider" style="position:relative">
+<div class="flexslider" style="position:relative; overflow:hidden;">
     <ul class="slides">
         <li>
             <a href="de/"><img src="images/splash_de.png" /></a>
@@ -28,7 +28,7 @@ height:200px;" />
             // alert('chuila');
             // curSlide = slider.slides[slider.currentSlide];
             // $(curSlide).find('.headline').fadeIn(500);
-            console.log(slider.currentSlide);
+            // console.log(slider.currentSlide);
         }
     });
     $('body').css('background-color', 'black');
