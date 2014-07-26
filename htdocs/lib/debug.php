@@ -18,13 +18,13 @@ function debug($label, $value) {
         }
     } else {
         if (is_null($value)) {
-            $value = "&lt;null&gt;";
+            $value = "<null>";
         } elseif ($value === false) {
-            $value = "&lt;false&gt;";
+            $value = "<false>";
         } else {
             $value = print_r($value, 1);
         }
-            echo("<pre>$label:\n$value</pre>");
+            echo("<pre>$label:\n".htmlentities($value)."</pre>");
     }
 }
 
