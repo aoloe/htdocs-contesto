@@ -144,6 +144,25 @@ if ($structure_url != 'splash') {
     $page_navigation = $template->fetch('template/navigation.php');
 }
 
+function get_csv_renderered($content, $placeholder, $path_csv, $path_template) {
+    $result = "";
+    $table = array();
+    if (($handle = fopen($path_csv, "r")) !== FALSE) {
+        while ($row = fgetcsv($handle)) {
+            $row = str_replace("\n", "<br>\n", $row);
+            $table[] = $row;
+        }
+        fclose($handle);
+    }
+    // debug('table', $table);
+    $template = new Template();
+    $template->clear();
+    $template->set('table', $table);
+    $result = $template->fetch($path_template);
+    $result = str_replace($placeholder, $result, $content);
+    return $result;
+}
+
 // debug('structure_url', $structure_url);
 if ($structure_url == 'splash') {
     $page_template = 'page_splash.php';
@@ -182,6 +201,10 @@ if ($structure_url == 'splash') {
             $content = file_get_contents($file_content);
             $page_content = Markdown($content);
         }
+        if ($structure_url == 'prices') {
+            $page_content = get_csv_renderered($page_content, '<!-- %prices_translation% -->', 'content/en/prices_translation.csv', 'template/content_prices_table.php');
+            $page_content = get_csv_renderered($page_content, '<!-- %prices_interpretation% -->', 'content/en/prices_interpretation.csv', 'template/content_prices_table.php');
+        }
     }
 }
 
@@ -193,6 +216,7 @@ $page_body = $template->fetch('template/'.$page_template);
 
 $template->clear();
 
+$template->set('favicon', $path.'images/favicon.png');
 $template->set('language', $page_language);
 $template->set('title', $page_title);
 $template->set('js', $page_js);

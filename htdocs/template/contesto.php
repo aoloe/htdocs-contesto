@@ -7,7 +7,7 @@
 
 <title><?= isset($title) ? $title.' - Contesto' : 'Contesto - Traduzioni – Übersetzungen – Traductions – Translations – Zürich'?></title>
 
-<link rel="shortcut icon" href="images/favicon.png" />
+<link rel="shortcut icon" href="<?= $favicon ?>" />
 <?php if (isset($fonts)) : foreach ($fonts as $value) : ?>
 <link rel="stylesheet" href="<?= $value ?>" />
 <?php endforeach; endif; ?>
