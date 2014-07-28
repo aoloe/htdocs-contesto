@@ -20,6 +20,7 @@ html & co:
 - simplify the styles in the navigations uls and lis
 - check that the language selection / cookies is working correctly
 - add also local fonts (+cdn)
+- add kai's honey pot to the contact form?
 - dynamically define the alternate page (what is it good for?)
       <meta name="generator" content="WPML ver:3.0.1 stt:4,1,3,27;0" />
       <link rel="alternate" hreflang="it-IT" href="http://contesto.illustration.ch/it/profilo/" />

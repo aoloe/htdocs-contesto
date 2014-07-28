@@ -1,5 +1,5 @@
 <?php
-$debug_log = false;
+$debug_log = true;
 
 include_once('lib/debug.php');
 
@@ -189,12 +189,38 @@ if ($structure_url == 'splash') {
     $template->clear();
 
     if ($structure_url == 'contact') {
-        include_once('lib/translation.php');
-        Translation::read('content/translation_content_contact.yaml', $page_language);
-        $template->clear();
-        $template->set('path', $path);
-        $page_content = $template->fetch('template/content_contact.php');
-        $page_css[] = $path.'css/content_contact.css';
+        include_once('lib/contact_form.php');
+        $contact_form = new Contact_form();
+        // $contact_form->set_mail_to('a.l.e@contesto.ch');
+        $contact_form->set_mail_to('ale@xox.ch');
+        // $contact_form->set_mail_from('ale@contesto.ch');
+        $contact_form->set_subject_prefix('[contesto:contatto] ');
+        $show_form = true;;
+        if ($contact_form->is_submitted()) {
+            $contact_form->read();
+            if (!$contact_form->is_valid()) {
+                debug('_REQUEST', $_REQUEST);
+                // TODO: show the contact form with error messages
+                // TODO: prefill the form with the fields value as read from the post
+                $show_form = true;;
+            } else {
+                if ($contact_form->is_spam() || $contact_form->send()) {
+                    // TODO: show the thank you page
+                } else {
+                    // TODO: show an error page
+                }
+            }
+        } else {
+        }
+        if ($show_form) {
+            include_once('lib/translation.php');
+            Translation::read('content/translation_content_contact.yaml', $page_language);
+            $template->clear();
+            $template->set('path', $path);
+            $template->set('post_prefix', $contact_form->get_request_prefix());
+            $page_content = $template->fetch('template/content_contact.php');
+            $page_css[] = $path.'css/content_contact.css';
+        }
     } else {
         $file_content = 'content/'.$page_language.'/'.$structure_url.'.md';
         if (file_exists($file_content)) {
