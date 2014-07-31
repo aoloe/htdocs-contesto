@@ -6,10 +6,10 @@ class Contact_form {
     public function set_request_prefix($prefix) {$this->request_prefix = $prefix;}
     public function get_request_prefix() {return $this->request_prefix;}
     private $field_request = array (
-        'name',
-        'email',
-        'subject',
-        'message',
+        'name' => null,
+        'email' => null,
+        'subject' => null,
+        'message' => null,
     );
 
     private $field_required = array (
@@ -17,7 +17,7 @@ class Contact_form {
     );
 
     private $field_valid_email = array (
-        'sender' => true,
+        'email' => true,
     );
 
     private $field_request_file = array();
@@ -47,17 +47,22 @@ class Contact_form {
         }
     }
 
-    public function get_field() {
-        return $this->field;
+    public function get_field($field = null) {
+        if (isset($field)) {
+            return $this->field[$field];
+        } else {
+            return $this->field;
+        }
     }
 
     public function read() {
+        // debug('field_request', $this->field_request);
         foreach ($this->field_request as $key => $value) {
             $request_key = $this->request_prefix.$key;
             if (array_key_exists($request_key, $_REQUEST)) {
                 $this->field[$key] = $_REQUEST[$request_key];
             } elseif (isset($value)) {
-                $this->field_request = $value;
+                $this->field[$key] = $value;
             }
             foreach ($this->field_request_file as $item) {
                 $request_key = $this->request_prefix.$item;
@@ -71,6 +76,7 @@ class Contact_form {
                 }
             }
         }
+        // debug('field', $this->field);
     }
 
     public function get($name) {
@@ -79,17 +85,18 @@ class Contact_form {
     
     public function is_valid() {
         $result = true;
-        debug('field_required', $this->field_required);
+        // debug('field_required', $this->field_required);
         foreach ($this->field_required as $key => $value) {
             $this->field_required[$key] = !empty($this->field[$key]);
             $result &= $this->field_required[$key];
         }
         debug('field_required', $this->field_required);
         foreach ($this->field_valid_email as $key => $value) {
-            $this->field_valid_email[$key] = (empty($this->field[$key]) || (strpos($this->field[$key], '@') === false));
+            $this->field_valid_email[$key] = (empty($this->field[$key]) || (strpos($this->field[$key], '@') !== false));
             $result &= $this->field_valid_email[$key];
         }
         debug('field_valid_email', $this->field_valid_email);
+        return $result;
     }
 
     public function is_spam() {
@@ -97,9 +104,9 @@ class Contact_form {
         // TODO: eventually add an honoey pot field that must be left empty...
         $result &= strpos($this->field['subject'], "MIME-Version") !== false;
         $result &= strpos($this->field['subject'], "Content-Type") !== false;
-        $result &= strpos($this->field['sender'], "MIME-Version") !== false;
+        $result &= strpos($this->field['email'], "MIME-Version") !== false;
         $result &= strpos($this->field['message'], "MIME-Version") !== false;
-        $result &= ($this->field['sender'] == $this->field['subject']) && ($this->field['sender'] == $this->field['message']);
+        $result &= ($this->field['email'] == $this->field['subject']) && ($this->field['email'] == $this->field['message']);
         return $result;
     }
 
@@ -118,22 +125,22 @@ class Contact_form {
     function send($server = "") {
         $result = true;
         if (empty($this->field['file'])) {
-            $this->sent = mail(
+            $result = mail(
                 $this->mail_to,
                 $this->subject_prefix.$this->field['subject'],
                 $this->field['message'],
-                "From: ".$this->field['sender']
+                "From: ".$this->field['email']
             );
         } else {
             include_once(LIB_PATH.'/htmlMimeMail.php');
             $mail = new htmlMimeMail();
             $attachment = $mail->getFile($this->field['file']['location']);
             $mail->addAttachment($attachment, $this->field['file']['name'], $this->field['file']['type']);
-            $mail->setFrom($this->field['sender']);
+            $mail->setFrom($this->field['email']);
             $mail->setSubject($this->subject_prefix.$this->field['subject']);
             $mail->setText($this->content);
             $mail->setHeader('X-Mailer', 'HTML Mime mail class (http://www.phpguru.org)');
-            $this->sent = $mail->send(array($this->target));
+            $result = $mail->send(array($this->target));
         }
         return $result;
     }
