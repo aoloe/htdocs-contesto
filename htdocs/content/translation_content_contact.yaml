@@ -1,13 +1,33 @@
 Contact_form :
-    it : Contatto
-    de : Kontaktformular
+    it : Formulario di contatto
+    de : Ihre Mitteilung an uns
     fr : Formulaire de contact
     en : Contact Form
+Contesto_Translations :
+    it : Traduzioni Contesto
+    de : Contesto Übersetzungen
+    fr : Traductions Contesto 
+    en : Contesto Translations
+Zurich :
+    it : Zurigo
+    de : Zürich
+    fr : Zurich
+    en : Zurich
+Switzerland :
+    it : Svizzera
+    de : Schweiz
+    fr : Suisse
+    en : Switzerland
 Name :
-    it : Nome
-    de : Name
-    fr : Nom
+    it : Nome, Cognome
+    de : Vorname, Nachname
+    fr : Prénom, Nom
     en : Name
+EMail :
+    it : E-mail
+    de : E-Mail
+    fr : E-mail
+    en : Email
 Subject :
     it : Oggetto
     de : Betreff

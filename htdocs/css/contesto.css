@@ -6,18 +6,18 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
     background:#000000;
     /* display:block; */
     width:100%;
+}
+
+.header div.inner{
+    max-width:930px;
+    margin:auto;
     min-height:50px;
     height:auto !important;
     height:50px;
     line-height:49px;
 }
 
-.header .inner{
-    max-width:930px;
-    margin:auto;
-}
-
-.header .inner .menu ul {
+ul.menu {
     display:table !important;
 }
 
@@ -27,36 +27,57 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
     float:left;
     position:relative;
     bottom:0;
-
 }
 
+.header div.language {
+    background:#fff;
+}
 
+.header div.language div.menu {
+    max-width:930px;
+    margin:auto;
+    min-height:50px;
+}
 
+.header div.language ul.menu li {
+    min-height:50px;
+    height:auto !important;
+    height:50px;
+    line-height:49px;
+}
 
-.menu ul li a {
+ul.menu  li a {
     color:#F29400;
 }
 
-.menu ul li a:hover {
+ul.menu li a:hover {
     color:#F6B958;
 }
 
-.menu ul li.current_page_item > a, .header .inner .menu ul li.current-menu-item > a {
+ul.menu li.current_page_item > a, .header .inner .menu ul li.current-menu-item > a {
     background:#322518;
     color:#F6B958;
 }
 
-.menu ul li.current > a, .menu ul li.current-menu-item > a, .menu ul li.current_page_item > a, .menu ul li.current-menu-ancestor > a, .menu ul li.current_page_ancestor > a{
-    background:#322518;
+ul.menu li.current > a, .menu ul li.current-menu-item > a, .menu ul li.current_page_item > a, .menu ul li.current-menu-ancestor > a, .menu ul li.current_page_ancestor > a{
+    background:#000;
     color:#F6B958;
 }
 
-.menu ul li:hover > a{
+div.language div.menu ul li.current-menu-item > a
+{
+    background:#fff;
+    color:#F6B958;
+}
+
+ul.menu li:hover > a{
     background:#000000;
     color:#F6B958;
 }
 
-.menu .sub-menu, .menu .children {
+.menu .sub-menu,
+.menu .children
+{
     background:#000000;
     background:rgba(0,0,0,1);
 }
@@ -160,3 +181,36 @@ strong {
     font-weight: bold;
     color: #666666;
 }
+
+p.logo img {
+    padding-right:20px;
+}
+
+.footer{
+}
+
+.footer div {
+    max-width:930px;
+    margin:auto;
+}
+
+.footer p,
+.footer p a,
+.footer p a:visited
+{
+    padding:0px;
+    margin:0px;
+    color:#ddd;
+    text-decoration:none;
+}
+.footer p.center {
+    text-align:center;
+    padding-bottom:40px;
+}
+.footer p.left {
+    float:left;
+}
+.footer p.right {
+    float:right;
+}
+

@@ -1,5 +1,9 @@
 splash :
+    module :
+        name : Splash
 about :
+    module :
+        filter : Csv
     navigation : 
         it :
             url : profilo
@@ -42,20 +46,38 @@ translators :
             url : uebersetzer
             label : Übersetzer
 prices : 
+    module :
+        filter : Csv
     navigation : 
         it : 
             url : tariffe
             label : Tariffe
         en : 
-            url : prices
-            label : Prices
+            url : rates
+            label : Rates
         fr : 
             url : tarifs
             label : Tarifs
         de : 
             url : preise
             label : Preise
+# quote : 
+#     navigation : 
+#         it : 
+#             url : offerta
+#             label : Richiesta d'offerta
+#         en : 
+#             url : quote
+#             label : Request a quote
+#         fr : 
+#             url : devis
+#             label : Demande de devis
+#         de : 
+#             url : offerte
+#             label : Offerteanfrage
 contact : 
+    module :
+        name : Contact
     navigation : 
         it : 
             url : contatto

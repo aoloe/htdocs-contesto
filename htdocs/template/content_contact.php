@@ -1,8 +1,8 @@
 <p><img class="alignnone" src="<?= $path ?>images/logo_contact.png" alt="Contesto" width="350" height="116" /><br />
-<strong>Contesto Translations</strong><br />
+<strong><?= tr('Contesto Translations') ?></strong><br />
 Heinrichstrasse 51<br />
-8005 Zürich<br />
-Switzerland</p>
+8005 <?= tr('Zurich') ?><br />
+<?= tr('Switzerland') ?></p>
 <p><img src="<?= $path ?>images/contact_mail.gif" alt="phone" /> 044 271 36 65<br />
 <img src="<?= $path ?>images/contact_fax.gif" alt="fax" /> 044 271 36 65<br />
 <img src="<?= $path ?>images/contact_mail.gif" alt="mail" /> <a href="mailto:traduzioni@contesto.ch">traduzioni@contesto.ch</a></p>

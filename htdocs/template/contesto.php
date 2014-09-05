@@ -22,9 +22,23 @@
 <script type="text/javascript" src="<?= $value ?>"></script>
 <?php endforeach; endif; ?>
 
-
 </head>
 <body>
+<?php if (isset($navigation)) : ?>
+<div class="header">
+<div class="inner">
+<?php /*
+<a class="logo" href="/<?= $language ?>/" title="Contesto"><img src="/images/header_logo.png" alt="Contesto" /></a>
+*/ ?>
+<a class="logo" href="/" title="Contesto"><img src="/images/header_logo.png" alt="Contesto" /></a>
+<?= $navigation ?>
+</div> <!-- inner -->
+<div class="language"><?= $navigation_language ?></div>
+</div> <!-- header -->
+<?php endif; ?>
 <?= $content ?>
+<?php if (isset($footer)) : ?>
+<?= $footer ?>
+<?php endif; ?>
 </body>
 </html>

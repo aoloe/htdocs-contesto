@@ -90,12 +90,12 @@ class Contact_form {
             $this->field_required[$key] = !empty($this->field[$key]);
             $result &= $this->field_required[$key];
         }
-        debug('field_required', $this->field_required);
+        Aoloe\debug('field_required', $this->field_required);
         foreach ($this->field_valid_email as $key => $value) {
             $this->field_valid_email[$key] = (empty($this->field[$key]) || (strpos($this->field[$key], '@') !== false));
             $result &= $this->field_valid_email[$key];
         }
-        debug('field_valid_email', $this->field_valid_email);
+        Aoloe\debug('field_valid_email', $this->field_valid_email);
         return $result;
     }
 

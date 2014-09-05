@@ -1,0 +1,10 @@
+@font-face {
+    font-family: UniversLtCn;
+    src: url("../fonts/UniversLTStd-LightCn.otf") format("opentype");
+}
+
+@font-face {
+    font-family: UniversLtCnBld;
+    font-weight: bold;
+    src: url("../fonts/UniversLTStd-BoldCn.otf") format("opentype");
+}

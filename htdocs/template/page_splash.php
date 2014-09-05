@@ -3,15 +3,18 @@
         <ul class="slides-container">
             <li>
                 <a href="de/"><img src="images/splash_de.png" /></a>
+                <div class="slides-traduzioni"><div class="row"><p><?= $traduzioni_de ?></p></div></div>
             </li>
             <li>
                 <a href="fr/"><img src="images/splash_fr.png" /></a>
-            </li>
+                <div class="slides-traduzioni"><div class="row"><p><?= $traduzioni_fr ?></p></div></div>
             <li>
                 <a href="en/"><img src="images/splash_en.png" /></a>
+                <div class="slides-traduzioni"><div class="row"><p><?= $traduzioni_en ?></p></div></div>
             </li>
             <li>
                 <a href="it/"><img src="images/splash_it.png" /></a>
+                <div class="slides-traduzioni"><div class="row"><p><?= $traduzioni_it ?></p></div></div>
             </li>
         </ul>
         <nav class="slides-navigation">
@@ -24,7 +27,7 @@
         </nav>
     </div>
     <div class="col_33"  id="slides-logo">
-        <a href="it/"><img src="images/splash_logo_it.png" /></a>
+        <a href="it/"><img src="images/splash_logo.png" /></a>
         <?php /*
         <img src="images/splash_logo_it.png" style="width:350px;
     height:200px;" />
@@ -32,8 +35,45 @@
     </div>
 </div>
 <style>
+#slides ul li {
+}
 .slides-navigation a {
     color:lightgray;
+}
+.slides-traduzioni {
+    display:table;
+    width:100%;
+    height:100%;
+}
+.slides-traduzioni .row {
+    display:table-cell;
+    vertical-align:bottom;
+    height:100%;
+    font-family:UniversLtCn;
+    font-size:1.5em;
+    text-transform: uppercase;
+}
+.slides-traduzioni .row p {
+    padding-top:15px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-color:black;
+}
+
+.slides-traduzioni .row a {
+    text-decoration: none;
+    color: #f6b958;
+}
+
+.slides-traduzioni .row a.active {
+    color:#fbca84;
+    font-weight:bold;
+}
+
+.slides-pagination {
+    color:white;
+    background-color:black;
+    text-align:left;
 }
 #slides-logo {
     /* background-color:red; */
@@ -59,6 +99,7 @@ $(document).ready(function() {
       $(this).remove();
     });
   });
+  /*
   $(document).on('animated.slides', function() {
       url = $('#slides-logo img').attr('src').split('/');
       image = url[url.length - 1].split('.');
@@ -75,6 +116,7 @@ $(document).ready(function() {
       $('#slides-logo img').attr('src', url);
       $('#slides-logo a').attr('href', list[current]+'/');
   });
+  */
 
 
   $('#slides').superslides({
@@ -83,6 +125,9 @@ $(document).ready(function() {
     pagination: false,
     // hashchange: true,
     scrollable: true
+  });
+  $('body').on('animated.slides', function() {
+      // console.log('chuila');
   });
 
   document.ontouchmove = function(e) {
