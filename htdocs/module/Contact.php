@@ -8,8 +8,7 @@ class Contact extends Aoloe\Module_abstract {
 
         $template = new Aoloe\Template();
 
-        include_once('lib/contact_form.php');
-        $contact_form = new Contact_form();
+        $contact_form = new Aoloe\Contact_form();
         $field_post = array();
         // $contact_form->set_mail_to('a.l.e@contesto.ch');
         $contact_form->set_mail_to('a.l.e@xox.ch');
@@ -41,8 +40,7 @@ class Contact extends Aoloe\Module_abstract {
         }
         // Aoloe\debug('show_form', $show_form);
         if ($show_form) {
-            include_once('lib/translation.php');
-            Translation::read('content/translation_content_contact.yaml', $this->language);
+            Aoloe\Translation::read('content/translation_content_contact.yaml', $this->language);
             $template->clear();
             $template->set('path', $this->site->get_path_relative());
             // TODO: show the contact form with error messages

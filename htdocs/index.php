@@ -68,8 +68,7 @@ if ($request_language == '') {
 
 // Aoloe\debug('get_url_request()', $route->get_url_request());
 
-include_once('lib/language_detector.php');
-$language = new Language_detector();
+$language = new Aoloe\Language_detector();
 $language->set_valid(array_keys($site_language));
 $language->set_cookie_manager(Aoloe\Cookie::factory());
 if (isset($request_language)) {

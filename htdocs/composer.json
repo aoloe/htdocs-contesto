@@ -32,6 +32,18 @@
         {
             "type": "vcs",
             "url":  "git@github.com:aoloe/php-site.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:aoloe/php-translation.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:aoloe/php-language_detector.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:aoloe/php-contact_form.git"
         }
     ],
     "require" : {
@@ -44,7 +56,10 @@
         "aoloe/php-route" : "dev-master",
         "aoloe/php-module" : "dev-master",
         "aoloe/php-markdown" : "dev-master",
-        "aoloe/php-site" : "dev-master"
+        "aoloe/php-site" : "dev-master",
+        "aoloe/php-translation" : "dev-master",
+        "aoloe/php-language_detector" : "dev-master",
+        "aoloe/php-contact_form" : "dev-master"
     },
     "authors" : [
         {

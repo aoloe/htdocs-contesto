@@ -48,6 +48,8 @@ further tasks:
     mkdir php-route
     mkdir php-site
     mkdir php-template
+    mkdir php-translation
+    mkdir php-language_detector
     mkdir php-cache/src
     mkdir php-cookie/src
     mkdir php-debug/src
@@ -56,6 +58,8 @@ further tasks:
     mkdir php-route/src
     mkdir php-site/src
     mkdir php-template/src
+    mkdir php-translation/src
+    mkdir php-language_detector/src
     cd php-cache/src
     put -f php-cache/src/Cache.php
     cd ../..
@@ -79,4 +83,10 @@ further tasks:
     cd ../..
     cd php-template/src
     put -f php-template/src/Template.php
+    cd ../..
+    cd php-translation/src
+    put -f php-translation/src/Translation.php
+    cd ../..
+    cd php-language_detector/src
+    put -f php-language_detector/src/Language_detector.php
     cd ../..
