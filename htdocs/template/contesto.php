@@ -3,7 +3,10 @@
 <head>
 
 <meta charset="utf-8">
+<?php /*
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+*/ ?>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title><?= isset($title) ? $title.' - Contesto' : 'Contesto - Traduzioni – Übersetzungen – Traductions – Translations – Zürich'?></title>
 

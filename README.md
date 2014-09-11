@@ -41,33 +41,42 @@ further tasks:
 ## Upload
 
     mkdir php-cache
+    mkdir php-contact_form
     mkdir php-cookie
     mkdir php-debug
+    mkdir php-language_detector
     mkdir php-markdown
     mkdir php-module
     mkdir php-route
     mkdir php-site
     mkdir php-template
     mkdir php-translation
-    mkdir php-language_detector
     mkdir php-cache/src
     mkdir php-cookie/src
+    mkdir php-contact_form/src
     mkdir php-debug/src
+    mkdir php-language_detector/src
     mkdir php-markdown/src
     mkdir php-module/src
     mkdir php-route/src
     mkdir php-site/src
     mkdir php-template/src
     mkdir php-translation/src
-    mkdir php-language_detector/src
+
     cd php-cache/src
     put -f php-cache/src/Cache.php
+    cd ../..
+    cd php-contact_form/src
+    put -f php-contact_form/src/Contact_form.php
     cd ../..
     cd php-cookie/src
     put -f php-cookie/src/Cookie.php
     cd ../..
     cd php-debug/src
     put -f php-debug/src/Debug.php
+    cd ../..
+    cd php-language_detector/src
+    put -f php-language_detector/src/Language_detector.php
     cd ../..
     cd php-markdown/src
     put -f php-markdown/src/Markdown.php
@@ -87,6 +96,6 @@ further tasks:
     cd php-translation/src
     put -f php-translation/src/Translation.php
     cd ../..
-    cd php-language_detector/src
-    put -f php-language_detector/src/Language_detector.php
-    cd ../..
+
+
+    find mysite . -name *.swp
