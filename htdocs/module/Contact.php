@@ -11,7 +11,8 @@ class Contact extends Aoloe\Module_abstract {
         $contact_form = new Aoloe\Contact_form();
         $field_post = array();
         // $contact_form->set_mail_to('a.l.e@contesto.ch');
-        $contact_form->set_mail_to('a.l.e@xox.ch');
+        $contact_form->set_mail_to('traduzioni@contesto.ch');
+        // $contact_form->set_mail_to('a.l.e@xox.ch');
         // $contact_form->set_mail_from('ale@contesto.ch');
         $contact_form->set_subject_prefix('[contesto:contatto] ');
         $show_form = true;
@@ -26,6 +27,7 @@ class Contact extends Aoloe\Module_abstract {
                 }
                 // Aoloe\debug('sent', $sent);
                 if ($sent) {
+                    Aoloe\Translation::read('content/translation_content_contact.yaml', $this->language);
                     $show_form = false;
                     // Aoloe\debug('_REQUEST', $_REQUEST);
                     // TODO: correctly show the sent page

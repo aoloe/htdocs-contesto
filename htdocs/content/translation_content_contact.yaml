@@ -51,3 +51,9 @@ Required_field :
     de : Obligatorisches Feld
     fr : Saisie obligatoire 
     en : Required field
+
+Thank_you_for_your_message :
+    it : Grazie per il messaggio
+    de : Danke für Ihre Mitteilung
+    fr : Merci pour votre message
+    en : Thank you for your message
