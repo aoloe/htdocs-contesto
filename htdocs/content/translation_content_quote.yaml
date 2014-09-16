@@ -1,0 +1,85 @@
+Request_a_quote :
+    it : Richiesta d'offerta
+    en : Request a quote
+    fr : Demande de devis
+    de : Offerteanfrage
+Source_language :
+    it : Lingua di partenza del testo
+    de : Sprache des Ausgangsdokument
+    fr : Langue de départ du texte
+    en : Source language
+Target_languages :
+    it : Lingue d'arrivo del testo
+    de : Zielsprachen
+    fr : Langues d'arrivée du texte
+    en : Target languages
+Required_delivery_time :
+    it : Termine di consegna desiderato
+    de : Liefertermin
+    fr : Delai de livraison souhaité
+    en : Required delivery time
+Document_to_be_translated :
+    it : Documento da tradurre
+    de : Zu übersetzendes Dokument
+    fr : Document à traduire
+    en : Document to be translated
+Company :
+    it : Ditta
+    de : Firma
+    fr : Société
+    en : Company
+Contact_person :
+    it : Persona di contatto
+    de : Kontaktperson
+    fr : Personne de contact
+    en : Contact person
+First_name,_name :
+    it : Nome, Cognome
+    de : Vorname, Nachname
+    fr : Prénom, Nom
+    en : Name
+Address :
+    it : Indirizzo
+    de : Adresse
+    fr : Adresse
+    en : Address
+ZIP,_City  :
+    it : NPA, Località
+    de : PLZ, Ort
+    fr : NPA, Localité
+    en : ZIP, City
+Phone :
+    it : Telefono
+    de : Telefon
+    fr : Téléphone
+    en : Phone
+Fax :
+    it : Fax
+    de : Fax
+    fr : Fax
+    en : Fax
+E-mail :
+    it : E-mail
+    de : E-Mail
+    fr : E-mail
+    en : Email
+Comments :
+    it : Comunicazioni
+    de : Mitteilungen
+    fr : Remarques
+    en : Comments
+Submit :
+    it : Invia
+    de : Senden
+    fr : Envoi
+    en : Submit
+Required_field :
+    it : Campi obligatori
+    de : Obligatorisches Feld
+    fr : Saisie obligatoire 
+    en : Required field
+Your_request_has_been_sent :
+    it : La richiesta è stato inviata
+    de : Ihre Anfrage wurde versandt
+    fr : Votre requête a été envoyée
+    en : Your request has been sent

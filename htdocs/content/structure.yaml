@@ -61,20 +61,22 @@ prices :
         de : 
             url : preise
             label : Preise
-# quote : 
-#     navigation : 
-#         it : 
-#             url : offerta
-#             label : Richiesta d'offerta
-#         en : 
-#             url : quote
-#             label : Request a quote
-#         fr : 
-#             url : devis
-#             label : Demande de devis
-#         de : 
-#             url : offerte
-#             label : Offerteanfrage
+quote : 
+    module :
+        name : Quote
+    navigation : 
+        it : 
+            url : offerta
+            label : Richiesta d'offerta
+        en : 
+            url : quote
+            label : Request a quote
+        fr : 
+            url : devis
+            label : Demande de devis
+        de : 
+            url : offerte
+            label : Offerteanfrage
 contact : 
     module :
         name : Contact
