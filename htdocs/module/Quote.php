@@ -26,8 +26,8 @@ class Quote extends Aoloe\Module_abstract {
 
         $contact_form = new Aoloe\Contact_form();
         // $contact_form->set_mail_to('a.l.e@contesto.ch');
-        // $contact_form->set_mail_to('traduzioni@contesto.ch');
-        $contact_form->set_mail_to('a.l.e@xox.ch');
+        $contact_form->set_mail_to('traduzioni@contesto.ch');
+        // $contact_form->set_mail_to('a.l.e@xox.ch');
         // $contact_form->set_mail_from('ale@contesto.ch');
         $contact_form->set_subject_prefix('[contesto:contatto] ');
         $contact_form->set_subject(tr('Request a quote'));
