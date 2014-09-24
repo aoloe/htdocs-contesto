@@ -36,7 +36,7 @@
 <a class="logo" href="/" title="Contesto"><img src="/images/header_logo.png" alt="Contesto" /></a>
 <?= $navigation ?>
 </div> <!-- inner -->
-<div class="language"><?= $navigation_language ?></div>
+<?= $navigation_language ?>
 </div> <!-- header -->
 <?php endif; ?>
 <?= $content ?>

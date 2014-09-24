@@ -91,6 +91,13 @@
     /* background-color:green; */
     max-width:70%;
 }
+
+@media only screen and (max-width: 640px) {
+    .slides-traduzioni .row p {
+        font-size:.6em;
+    }
+
+}
 </style>
 <script>
 $(document).ready(function() {
