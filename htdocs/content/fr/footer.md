@@ -1,5 +1,5 @@
 {.center}
-Contesto Sarl -- Heinrichstrasse 51 -- 8005 Zurich
+Contesto Sarl -- Heinrichstrasse 32 -- 8005 Zurich
 
 {.left}
 Site [Ale Rimoldi](http://ideale.ch)

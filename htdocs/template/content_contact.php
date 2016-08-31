@@ -1,6 +1,6 @@
 <p><img class="alignnone" src="<?= $path ?>images/logo_contact.png" alt="Contesto" width="350" height="116" /><br />
 <strong><?= tr('Contesto Translations') ?></strong><br />
-Heinrichstrasse 51<br />
+Heinrichstrasse 32<br />
 8005 <?= tr('Zurich') ?><br />
 <?= tr('Switzerland') ?></p>
 <p><img src="<?= $path ?>images/contact_mail.gif" alt="phone" /> 044 271 36 65<br />

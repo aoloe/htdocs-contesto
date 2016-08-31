@@ -1,5 +1,5 @@
 {.center}
-Contesto GmbH -- Heinrichstrasse 51 -- 8005 Zürich
+Contesto GmbH -- Heinrichstrasse 32 -- 8005 Zürich
 
 {.left}
 Website [Ale Rimoldi](http://ideale.ch)

@@ -76,7 +76,7 @@ quote :
             label : Demande de devis
         de : 
             url : offerte
-            label : Offerteanfrage
+            label : Offerte / Angebot
 contact : 
     module :
         name : Contact
